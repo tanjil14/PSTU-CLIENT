@@ -1,0 +1,15 @@
+.nav-link {
+  color: #fff !important;
+}
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+  .right-space a,.nav-item a {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.bg-primary {
+    background: #00336e !important;
+}

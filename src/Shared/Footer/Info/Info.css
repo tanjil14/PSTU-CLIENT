@@ -1,0 +1,22 @@
+.list-group-item {
+  background: #00336e;
+  border: none;
+  color: #fff;
+  border-bottom: 1px solid gray;
+  font-size: 14px;
+}
+.link-list a {
+  text-decoration: none;
+  outline: none;
+}
+.link-list a:hover {
+  text-decoration: underline;
+  
+}
+.link-list a:hover .list-group-item{
+    color: #0080ff;
+}
+.f-title{
+    color:#f9f9f9;
+    font-size: 1.5rem;
+}

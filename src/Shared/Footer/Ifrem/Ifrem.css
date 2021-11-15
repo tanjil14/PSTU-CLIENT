@@ -1,0 +1,9 @@
+iframe {
+  width: 80%;
+  height: 350px;
+  border: 0;
+}
+
+/* @media (max-width: 768) {
+  width: 100%;
+} */
