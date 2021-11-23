@@ -1,3 +1,19 @@
 .footer{
     background: #00336e !important;
 }
+.footer-bottom{
+    background: rgb(41, 47, 56);
+    font-size: 13px;
+    color:#000;
+    font-weight: 500;
+}
+.footer-bottom .pgs{
+    color:#fff;
+}
+.footer-bottom .developer{
+    color:#0daaf3ec;
+   
+}
+.footer-bottom .developer a{
+    text-decoration: none;
+}

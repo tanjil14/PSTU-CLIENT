@@ -1,0 +1,15 @@
+.notice-board .notice-header {
+  background: #e0f0ff;
+  font-size: 24px;
+}
+.news-list ul li,
+.Notices-list ul li {
+  font-size: 1.2rem;
+  color: #33b5e5;
+}
+
+.news-list ul li:hover,
+.Notices-list ul li:hover {
+  color: #414852;
+  cursor: pointer;
+}
