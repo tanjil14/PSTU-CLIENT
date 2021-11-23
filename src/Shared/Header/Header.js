@@ -15,59 +15,54 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="right-space navbarScroll">
-            <Nav.Link className="me-2 me-lg-4" to="#features">
-              HOME
+            <Nav.Link className="me-2 me-lg-5">
+              <Link to="/home">Home</Link>
             </Nav.Link>
-            {/* <NavDropdown title="About" id="collasible-nav-dropdown">
-              <NavDropdown.Item to="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item to="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item to="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item to="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown> */}
-            <li className="nav-item dropdown me-2 me-lg-4">
+            <li className="nav-item dropdown me-2 me-lg-5">
               <Link className="nav-link" to="#">
                 ABOUT
               </Link>
               <div className="dropdown-menu ">
-                <Link className="dropdown-item" to="#">
-                  Link 1
+                <Link className="dropdown-item" to="/welcome">
+                  Welcome
                 </Link>
-                <Link className="dropdown-item" to="#">
-                  Link 2
+                <Link className="dropdown-item" to="/history">
+                  History
                 </Link>
-                <Link className="dropdown-item" to="#">
-                  Link 3
+                <Link className="dropdown-item" to="/vision">
+                  Vision
+                </Link>
+                <Link className="dropdown-item" to="/gallery">
+                  Image Gallery
                 </Link>
               </div>
             </li>
 
-            <li className="nav-item dropdown me-2 me-lg-4">
+            <li className="nav-item dropdown me-2 me-lg-5">
               <Link className="nav-link" to="#">
                 ACADEMIC
               </Link>
               <div className="dropdown-menu">
-                <Link className="dropdown-item" to="#">
-                  Link 1
+                <Link className="dropdown-item" to="/bsc_in_cse">
+                  B.Sc. in CSE
                 </Link>
                 <Link className="dropdown-item" to="#">
-                  Link 2
+                  Admission
                 </Link>
                 <Link className="dropdown-item" to="#">
-                  Link 3
+                  Result
+                </Link>
+                <Link className="dropdown-item" to="#">
+                  Student
                 </Link>
               </div>
             </li>
 
-            <li className="nav-item dropdown me-2 me-lg-4">
+            <li className="nav-item dropdown me-2 me-lg-5">
               <Link className="nav-link" to="#">
                 FACULTY
               </Link>
-              <div className="dropdown-menu">
+              {/* <div className="dropdown-menu">
                 <Link className="dropdown-item" to="#">
                   Link 1
                 </Link>
@@ -77,42 +72,36 @@ const Header = () => {
                 <Link className="dropdown-item" to="#">
                   Link 3
                 </Link>
-              </div>
+              </div> */}
             </li>
-            <li className="nav-item dropdown me-2 me-lg-4">
+            <li className="nav-item dropdown me-2 me-lg-5">
               <Link className="nav-link" to="#">
                 ADMINISTRATION
               </Link>
               <div className="dropdown-menu">
-                <Link className="dropdown-item" to="#">
-                  Link 1
+                <Link className="dropdown-item" to="dean-office">
+                  Dean Office
                 </Link>
-                <Link className="dropdown-item" to="#">
-                  Link 2
-                </Link>
-                <Link className="dropdown-item" to="#">
-                  Link 3
+                <Link className="dropdown-item" to="staffs">
+                  Other Staff
                 </Link>
               </div>
             </li>
-            <li className="nav-item dropdown me-2 me-lg-4">
+            <li className="nav-item dropdown me-2 me-lg-5">
               <Link className="nav-link" to="#">
                 ANNOUNCEMENT
               </Link>
               <div className="dropdown-menu">
-                <Link className="dropdown-item" to="#">
-                  Link 1
+                <Link className="dropdown-item" to="/notice">
+                  Notice Board
                 </Link>
-                <Link className="dropdown-item" to="#">
-                  Link 2
-                </Link>
-                <Link className="dropdown-item" to="#">
-                  Link 3
+                <Link className="dropdown-item" to="/news">
+                  News And Event
                 </Link>
               </div>
             </li>
 
-            <li className="nav-item dropdown me-2  me-lg-4">
+            {/* <li className="nav-item dropdown me-2  me-lg-4">
               <Link className="nav-link" to="#">
                 DOWNLOAD
               </Link>
@@ -127,7 +116,7 @@ const Header = () => {
                   Link 3
                 </Link>
               </div>
-            </li>
+            </li> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
