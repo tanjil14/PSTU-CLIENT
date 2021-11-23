@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Table } from "react-bootstrap";
 import "./Cse.css";
 import TableDataForCsePage from "./TableDataForCsePage";
-import TableForCse from "./TableForCse";
 import TableHeaderForCsePage from "./TableHeaderForCsePage";
 const Cse = () => {
   return (
@@ -128,6 +127,357 @@ const Cse = () => {
               <TableDataForCsePage
                 courseCode={"CCE 124"}
                 courseTitle={"Computer Programming Contest-I"}
+                creditHour={0}
+              />
+            </tbody>
+          </Table>
+        </div>
+       
+        <div className="cse-box my-0 px-4">
+          <h4>Level-2,Semester-I</h4>
+          <Table responsive="sm" striped bordered hover variant="dark">
+            <thead>
+              <TableHeaderForCsePage />
+            </thead>
+            <tbody>
+              <TableDataForCsePage
+                courseCode={"CIT 211"}
+                courseTitle={"Data Structure and Algorithms"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 212"}
+                courseTitle={" 	Data Structure and Algorithms Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 213"}
+                courseTitle={"Software Engineering"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CCE 211"}
+                courseTitle={"Data Communication and Engineering"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"MAT 211"}
+                courseTitle={"Mathematics-III"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"EEE 211"}
+                courseTitle={"Electrical Technology"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"EEE 212"}
+                courseTitle={"Electrical Technology Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"AIS 211"}
+                courseTitle={"Accounting and Management"}
+                creditHour={3}
+              />
+            </tbody>
+          </Table>
+        </div>
+        <div className="cse-box my-0 px-4">
+          <h4>Level-2,Semester-II</h4>
+          <Table responsive="sm" striped bordered hover variant="dark">
+            <thead>
+              <TableHeaderForCsePage />
+            </thead>
+            <tbody>
+              <TableDataForCsePage
+                courseCode={"CCE 221"}
+                courseTitle={"Digital Logic Design"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CCE 222"}
+                courseTitle={"Digital Logic Design Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"CCE 223"}
+                courseTitle={"Database System"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CCE 224"}
+                courseTitle={"Database System Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"MAT 221"}
+                courseTitle={"Mathematics-IV"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 221"}
+                courseTitle={"Information System Analysis and Design"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 222"}
+                courseTitle={"Information System Analysis and Design Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"AES 221"}
+                courseTitle={"Government and Economics"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 220"}
+                courseTitle={"Web Programming Project"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 224"}
+                courseTitle={"Computer Programming Contest-II"}
+                creditHour={0}
+              />
+            </tbody>
+          </Table>
+        </div>
+        <div className="cse-box my-0 px-4">
+          <h4>Level-2,Semester-II</h4>
+          <Table responsive="sm" striped bordered hover variant="dark">
+            <thead>
+              <TableHeaderForCsePage />
+            </thead>
+            <tbody>
+              <TableDataForCsePage
+                courseCode={"CCE 221"}
+                courseTitle={"Digital Logic Design"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CCE 222"}
+                courseTitle={"Digital Logic Design Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"CCE 223"}
+                courseTitle={"Database System"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CCE 224"}
+                courseTitle={"Database System Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"MAT 221"}
+                courseTitle={"Mathematics-IV"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 221"}
+                courseTitle={"Information System Analysis and Design"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 222"}
+                courseTitle={"Information System Analysis and Design Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"AES 221"}
+                courseTitle={"Government and Economics"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 220"}
+                courseTitle={"Web Programming Project"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 224"}
+                courseTitle={"Computer Programming Contest-II"}
+                creditHour={0}
+              />
+            </tbody>
+          </Table>
+        </div>
+        <div className="cse-box my-0 px-4">
+          <h4>Level-2,Semester-II</h4>
+          <Table responsive="sm" striped bordered hover variant="dark">
+            <thead>
+              <TableHeaderForCsePage />
+            </thead>
+            <tbody>
+              <TableDataForCsePage
+                courseCode={"CCE 221"}
+                courseTitle={"Digital Logic Design"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CCE 222"}
+                courseTitle={"Digital Logic Design Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"CCE 223"}
+                courseTitle={"Database System"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CCE 224"}
+                courseTitle={"Database System Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"MAT 221"}
+                courseTitle={"Mathematics-IV"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 221"}
+                courseTitle={"Information System Analysis and Design"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 222"}
+                courseTitle={"Information System Analysis and Design Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"AES 221"}
+                courseTitle={"Government and Economics"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 220"}
+                courseTitle={"Web Programming Project"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 224"}
+                courseTitle={"Computer Programming Contest-II"}
+                creditHour={0}
+              />
+            </tbody>
+          </Table>
+        </div>
+        <div className="cse-box my-0 px-4">
+          <h4>Level-2,Semester-II</h4>
+          <Table responsive="sm" striped bordered hover variant="dark">
+            <thead>
+              <TableHeaderForCsePage />
+            </thead>
+            <tbody>
+              <TableDataForCsePage
+                courseCode={"CCE 221"}
+                courseTitle={"Digital Logic Design"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CCE 222"}
+                courseTitle={"Digital Logic Design Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"CCE 223"}
+                courseTitle={"Database System"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CCE 224"}
+                courseTitle={"Database System Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"MAT 221"}
+                courseTitle={"Mathematics-IV"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 221"}
+                courseTitle={"Information System Analysis and Design"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 222"}
+                courseTitle={"Information System Analysis and Design Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"AES 221"}
+                courseTitle={"Government and Economics"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 220"}
+                courseTitle={"Web Programming Project"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 224"}
+                courseTitle={"Computer Programming Contest-II"}
+                creditHour={0}
+              />
+            </tbody>
+          </Table>
+        </div>
+        <div className="cse-box my-0 px-4">
+          <h4>Level-2,Semester-II</h4>
+          <Table responsive="sm" striped bordered hover variant="dark">
+            <thead>
+              <TableHeaderForCsePage />
+            </thead>
+            <tbody>
+              <TableDataForCsePage
+                courseCode={"CCE 221"}
+                courseTitle={"Digital Logic Design"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CCE 222"}
+                courseTitle={"Digital Logic Design Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"CCE 223"}
+                courseTitle={"Database System"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CCE 224"}
+                courseTitle={"Database System Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"MAT 221"}
+                courseTitle={"Mathematics-IV"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 221"}
+                courseTitle={"Information System Analysis and Design"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 222"}
+                courseTitle={"Information System Analysis and Design Sessional"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"AES 221"}
+                courseTitle={"Government and Economics"}
+                creditHour={3}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 220"}
+                courseTitle={"Web Programming Project"}
+                creditHour={1.5}
+              />
+              <TableDataForCsePage
+                courseCode={"CIT 224"}
+                courseTitle={"Computer Programming Contest-II"}
                 creditHour={0}
               />
             </tbody>
