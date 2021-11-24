@@ -9,11 +9,11 @@ const Info = () => {
         <Col xs={12} sm={6}>
           <h3 className="f-title mb-3">Quick Links</h3>
           <ListGroup className="link-list" variant="flush">
-            <Link to="#">
+            <Link to="/pstu_at_glance">
               <ListGroup.Item>PSTU at a Glance</ListGroup.Item>
             </Link>
-            <Link to="#">
-              <ListGroup.Item>PSTU Official Web Site</ListGroup.Item>
+            <Link to="" target="_blank">
+              <ListGroup.Item href="#link1">PSTU Official Web Site</ListGroup.Item>
             </Link>
             <Link to="#">
               <ListGroup.Item>Admission in PSTU</ListGroup.Item>
