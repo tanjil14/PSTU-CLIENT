@@ -6,6 +6,8 @@ import ImageGallery from "./Pages/Dropdown/About/ImageGallery/ImageGallery";
 import Vision from "./Pages/Dropdown/About/Vision/Vision";
 import Welcome from "./Pages/Dropdown/About/Welcome/Welcome";
 import Cse from "./Pages/Dropdown/Academic/Cse";
+import DeanOffice from "./Pages/Dropdown/Administration/DeanOffice";
+import OtherStaff from "./Pages/Dropdown/Administration/OtherStaff";
 import Footer from "./Shared/Footer/Footer";
 import TopHeader from "./Shared/TopHeader/TopHeader";
 
@@ -19,19 +21,25 @@ function App() {
             <Home />
           </Route>
           <Route path="/welcome">
-           <Welcome/>
+            <Welcome />
           </Route>
           <Route path="/history">
-           <History/>
+            <History />
           </Route>
           <Route path="/vision">
-           <Vision/>
+            <Vision />
           </Route>
           <Route path="/gallery">
-           <ImageGallery/>
+            <ImageGallery />
           </Route>
           <Route path="/bsc_in_cse">
-           <Cse/>
+            <Cse />
+          </Route>
+          <Route path="/dean-office">
+            <DeanOffice />
+          </Route>
+          <Route path="/staffs">
+            <OtherStaff />
           </Route>
           <Route path="*">
             <Home />
