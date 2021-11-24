@@ -13,6 +13,7 @@ import Footer from "./Shared/Footer/Footer";
 import TopHeader from "./Shared/TopHeader/TopHeader";
 import MainNews from "./Pages/Dropdown/Announcement/MainNews";
 import PstuAtGlance from "./Pages/Glance/PstuAtGlance";
+import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -52,6 +53,9 @@ function App() {
           </Route>
           <Route path="/pstu_at_glance">
             <PstuAtGlance />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard/>
           </Route>
           <Route path="*">
             <Home />
