@@ -1,9 +1,13 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import Footer from '../../../Shared/Footer/Footer';
+import TopHeader from '../../../Shared/TopHeader/TopHeader';
 import SingleNotice from './SingleNotice';
 
 const NoticeBoard = () => {
     return (
+      <>
+      <TopHeader/>
         <section className="welcome-box my-5">
       <Container>
         <div className="main-box py-3 px-5">
@@ -22,6 +26,8 @@ const NoticeBoard = () => {
         </div>
       </Container>
     </section>
+    <Footer/>
+    </>
     );
 };
 

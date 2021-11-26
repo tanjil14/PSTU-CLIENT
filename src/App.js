@@ -1,5 +1,5 @@
 // import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Home from "./Home/Home/Home";
 import NoticeBoard from "./Pages/Dropdown/Announcement/NoticeBoard";
 import History from "./Pages/Dropdown/About/History/History";
@@ -9,17 +9,19 @@ import Welcome from "./Pages/Dropdown/About/Welcome/Welcome";
 import Cse from "./Pages/Dropdown/Academic/Cse";
 import DeanOffice from "./Pages/Dropdown/Administration/DeanOffice";
 import OtherStaff from "./Pages/Dropdown/Administration/OtherStaff";
-import Footer from "./Shared/Footer/Footer";
-import TopHeader from "./Shared/TopHeader/TopHeader";
 import MainNews from "./Pages/Dropdown/Announcement/MainNews";
 import PstuAtGlance from "./Pages/Glance/PstuAtGlance";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+import Login from "./Pages/Dashboard/Login/Login";
+import Register from "./Pages/Dashboard/Login/Register";
+import AuthProvider from "./context/AuthProvider/AuthProvider";
+import PrivateRoute from "./Pages/Dashboard/Login/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
-    <div className="App">
+    <>
+    <AuthProvider>
       <Router>
-        <TopHeader />
         <Switch>
           <Route exact path="/">
             <Home />
@@ -54,16 +56,23 @@ function App() {
           <Route path="/pstu_at_glance">
             <PstuAtGlance />
           </Route>
-          <Route path="/dashboard">
+          <PrivateRoute path="/dashboard">
             <Dashboard/>
+          </PrivateRoute>
+          <Route path="/login">
+            <Login/>
+          </Route>
+          <Route path="/register">
+            <Register/>
           </Route>
           <Route path="*">
             <Home />
           </Route>
         </Switch>
-        <Footer />
+        
       </Router>
-    </div>
+      </AuthProvider>
+    </>
   );
 }
 

@@ -1,10 +1,13 @@
+
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 import Banner from "../Banner/Banner";
 import Header from "../Header/Header";
 import "./TopHeader.css";
 const TopHeader = () => {
+  const {user,logOut,}=useAuth()
   return (
     <header>
       <nav className="breadcrumb">
@@ -13,12 +16,22 @@ const TopHeader = () => {
             <li>
               <Link to="#">Web</Link>
             </li>
-            <li>
-              <Link to="#">Teacher Log In</Link>
+            {
+              user?.email?
+              <li>
+              <button  onClick={logOut}><small>{user.displayName}</small> Logout</button>
             </li>
+            :
             <li>
+              <Link to="/login">  LogIn</Link>
+            </li>
+            }
+            <li>
+              <Link to="/dashboard"> Admin</Link>
+            </li>
+            {/* <li>
               <Link to="#">Student Log In</Link>
-            </li>
+            </li> */}
           </ul>
         </Container>
       </nav>

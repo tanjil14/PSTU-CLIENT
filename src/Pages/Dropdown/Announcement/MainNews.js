@@ -5,8 +5,12 @@ import banner2 from "../../../images/IMG_60531.jpg"
 import banner3 from "../../../images/cc.jpg"
 import "./MainNews.css";
 import SubNews from "./SubNews";
+import Footer from "../../../Shared/Footer/Footer";
+import TopHeader from "../../../Shared/TopHeader/TopHeader";
 const MainNews = () => {
   return (
+    <>
+    <TopHeader/>
     <section className="welcome-box my-5">
       <Container className="main-box">
         <SubNews
@@ -29,6 +33,8 @@ const MainNews = () => {
         />
       </Container>
     </section>
+    <Footer/>
+    </>
   );
 };
 

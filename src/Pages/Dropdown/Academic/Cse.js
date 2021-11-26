@@ -1,10 +1,14 @@
 import React from "react";
 import { Container, Table } from "react-bootstrap";
+import Footer from "../../../Shared/Footer/Footer";
+import TopHeader from "../../../Shared/TopHeader/TopHeader";
 import "./Cse.css";
 import TableDataForCsePage from "./TableDataForCsePage";
 import TableHeaderForCsePage from "./TableHeaderForCsePage";
 const Cse = () => {
   return (
+    <>
+    <TopHeader/>
     <section className="bsc_in_cse my-4">
       <Container className="cse-box">
         <div className=" py-3 px-4">
@@ -485,6 +489,8 @@ const Cse = () => {
         </div>
       </Container>
     </section>
+    <Footer/>
+    </>
   );
 };
 export default Cse;

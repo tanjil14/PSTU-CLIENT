@@ -1,8 +1,12 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import Footer from "../../../../Shared/Footer/Footer";
+import TopHeader from "../../../../Shared/TopHeader/TopHeader";
 import "./Welcome.css";
 const Welcome = () => {
   return (
+    <>
+    <TopHeader/>
     <section className="welcome-box my-5">
       <Container>
       <div className="main-box py-3 px-5">
@@ -21,6 +25,8 @@ const Welcome = () => {
       </div>
       </Container>
     </section>
+    <Footer/>
+    </>
   );
 };
 

@@ -6,8 +6,12 @@ import img1 from "../../../images/salma.jpg"
 import img2 from "../../../images/saiful.jpg"
 import img3 from "../../../images/nurul_hoque.png"
 import img from "../../../images/imag.png"
+import TopHeader from "../../../Shared/TopHeader/TopHeader";
+import Footer from "../../../Shared/Footer/Footer";
 const DeanOffice = () => {
   return (
+    <>
+    <TopHeader/>
     <section className="welcome-box my-5">
       <Container>
         <div className="main-box py-3 px-5">
@@ -56,6 +60,8 @@ const DeanOffice = () => {
         </div>
       </Container>
     </section>
+    <Footer/>
+    </>
   );
 };
 

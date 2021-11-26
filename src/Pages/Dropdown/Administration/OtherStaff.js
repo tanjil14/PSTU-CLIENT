@@ -8,8 +8,12 @@ import harun from "../../../images/harun.jpg"
 import mamun from "../../../images/mamun.jpg"
 import sherin from "../../../images/sherin_akter.jpg"
 import Staff from "./Staff";
+import TopHeader from "../../../Shared/TopHeader/TopHeader";
+import Footer from "../../../Shared/Footer/Footer";
 const OtherStaff= () => {
   return (
+    <>
+    <TopHeader/>
     <section className="welcome-box my-5">
       <Container>
         <div className="main-box py-3 px-5">
@@ -75,6 +79,8 @@ const OtherStaff= () => {
         </div>
       </Container>
     </section>
+    <Footer/>
+    </>
   );
 };
 
