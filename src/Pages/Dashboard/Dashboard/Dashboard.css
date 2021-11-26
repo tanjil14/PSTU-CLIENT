@@ -1,0 +1,47 @@
+.sidebar {
+    background: #000;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+  }
+  
+  .sidebar ul li {
+    padding: 10px 5px;
+  }
+  .sidebar ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* collapse button */
+  .custom_menu {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 0;
+  }
+  .btn_collapse {
+    position: relative;
+    color: #fff !important;
+  }
+  .btn_collapse:hover {
+    background: #fff;
+    color: #000;
+  }
+  
+  #content {
+    height: 100vh;
+    overflow: auto;
+  }
+  
+  .deleteIcon,
+  .editIcon {
+    cursor: pointer;
+  }
+  .deleteIcon {
+    color: rgba(255, 51, 0, 0.952);
+  }
+  .editIcon {
+    color: green;
+  }
+ 
+  

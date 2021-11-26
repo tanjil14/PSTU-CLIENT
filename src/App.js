@@ -16,6 +16,7 @@ import Login from "./Pages/Dashboard/Login/Login";
 import Register from "./Pages/Dashboard/Login/Register";
 import AuthProvider from "./context/AuthProvider/AuthProvider";
 import PrivateRoute from "./Pages/Dashboard/Login/PrivateRoute/PrivateRoute";
+import AddNews from "./Pages/Dashboard/Dashboard/AddNews";
 
 function App() {
   return (
@@ -58,6 +59,9 @@ function App() {
           </Route>
           <PrivateRoute path="/dashboard">
             <Dashboard/>
+          </PrivateRoute>
+          <PrivateRoute path="/add_news">
+            <AddNews/>
           </PrivateRoute>
           <Route path="/login">
             <Login/>
