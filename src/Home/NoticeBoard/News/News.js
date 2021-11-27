@@ -15,7 +15,7 @@ const News = () => {
            <ul>
               {
                   news.map(nw=><li key={nw._id}>
-                    <NavLink to="#">
+                    <NavLink to={`/news/${nw._id}`} >
                       {nw.title}
                     </NavLink>
                     </li>)

@@ -17,6 +17,7 @@ import Register from "./Pages/Dashboard/Login/Register";
 import AuthProvider from "./context/AuthProvider/AuthProvider";
 import PrivateRoute from "./Pages/Dashboard/Login/PrivateRoute/PrivateRoute";
 import AddNews from "./Pages/Dashboard/Dashboard/AddNews";
+import SingleNews from "./Home/NoticeBoard/News/SingleNews";
 
 function App() {
   return (
@@ -51,12 +52,13 @@ function App() {
           <Route path="/notice">
             <NoticeBoard />
           </Route>
+          <Route  path="/news/:id">
+            <SingleNews/>
+          </Route>
           <Route path="/news">
             <MainNews />
           </Route>
-          <Route path="/news/:id">
-            <MainNews />
-          </Route>
+          
           <Route path="/pstu_at_glance">
             <PstuAtGlance />
           </Route>

@@ -6,7 +6,7 @@ const SubNews = ({img,title,time,date,description,by}) => {
     return (
         <Row className="py-3 px-5  ">
           <hr className="my-5"/>
-          <br />
+          <br /> 
           <Col sm md={5} className="box-banner  p-2">
             <img src={img} alt="" />
           </Col>
