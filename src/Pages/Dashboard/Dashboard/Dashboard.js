@@ -25,7 +25,7 @@ const Dashboard = () => {
         </li>
         <li>
           <NavLink to="/add_news">
-            <i class="far fa-plus-square"></i> Add News
+            <i className="far fa-plus-square"></i> Add News
           </NavLink>
         </li>
         

@@ -7,18 +7,33 @@ import "./MainNews.css";
 import SubNews from "./SubNews";
 import Footer from "../../../Shared/Footer/Footer";
 import TopHeader from "../../../Shared/TopHeader/TopHeader";
+import { useEffect } from "react";
+import { useState } from "react";
 const MainNews = () => {
+  const [news,setNews]=useState([])
+  useEffect(()=>{
+    fetch('http://localhost:5000/news')
+    .then(res=>res.json())
+    .then(data=>setNews(data))
+  },[])
+  console.log(news)
   return (
     <>
     <TopHeader/>
     <section className="welcome-box my-5">
       <Container className="main-box">
-        <SubNews
-          img={banner1}
-          title="A training program on LARAVEL"
-          time="2018-10-04 16:48:34"
-          description="Faculty of Computer Science and Engineering, PSTU is going to arrange a training program on LARAVEL"
-        />
+      {
+      news.map(nw=><SubNews
+         img={nw.image}
+         key={nw._id}
+         title={nw.title}
+         date={nw.date}
+         time={nw.time}
+         by={nw.name}
+         description={nw.textarea}
+      ></SubNews>)
+    }
+        
         <SubNews
           img={banner2}
           title="পবিপ্ৰবি তথ্যপ্রযুক্তি উৎসব ২০১৮ সফলভাবে সম্পন্ন"

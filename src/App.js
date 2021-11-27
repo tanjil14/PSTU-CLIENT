@@ -54,6 +54,9 @@ function App() {
           <Route path="/news">
             <MainNews />
           </Route>
+          <Route path="/news/:id">
+            <MainNews />
+          </Route>
           <Route path="/pstu_at_glance">
             <PstuAtGlance />
           </Route>

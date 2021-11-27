@@ -1,14 +1,25 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import "./News.css"
 const News = () => {
+    const [news,setNews]=useState([])
+    useEffect(()=>{
+        fetch('http://localhost:5000/news')
+        .then(res=>res.json())
+        .then(data=>setNews(data))
+      },[])
     return (
         <div className="news-list">
            <ul>
-              <li>item-1</li> 
-              <li>item-1</li> 
-              <li>item-1</li> 
-              <li>item-1</li> 
-              <li>item-1</li> 
+              {
+                  news.map(nw=><li key={nw._id}>
+                    <NavLink to="#">
+                      {nw.title}
+                    </NavLink>
+                    </li>)
+              } 
         </ul> 
         </div>
     );
