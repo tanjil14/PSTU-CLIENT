@@ -49,7 +49,7 @@ const AddNotice = () => {
   const handleDelete=(id)=>{
     const proceed=window.confirm('Are you sure,you want to delete?');
     if(proceed){
-      const url=`http://localhost:5000/news/${id}`
+      const url=`http://localhost:5000/notice/${id}`
       fetch(url,{
           method:'DELETE'
       })
@@ -139,7 +139,7 @@ const AddNotice = () => {
                <div className="d-flex w-100 justify-content-between">
                  <h5 className="mb-1">{nw.title}</h5>
                  <div className="d-flex gap-2">
-                   <Link to={`/news/update/${nw._id}`}>
+                   <Link to={`/notice/update/${nw._id}`}>
                    <button  className="btn btn-warning btn-sm">Update</button> </Link>
                    <button onClick={()=>handleDelete(nw._id)} className="btn btn-danger btn-sm">Delete</button>
                  </div>

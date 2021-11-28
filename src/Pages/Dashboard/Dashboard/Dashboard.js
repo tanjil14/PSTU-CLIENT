@@ -20,7 +20,7 @@ const Dashboard = () => {
         </li>
         <li>
           <NavLink to="/add_notice">
-            <span className="fa fa-user mr-3"></span> Add Event
+            <span className="fa fa-user mr-3"></span> Add Notice
           </NavLink>
         </li>
         <li>

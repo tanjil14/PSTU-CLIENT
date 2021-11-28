@@ -2,17 +2,19 @@ import { Alert } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
+
 import Dashboard from "./Dashboard";
 
-const UpdateNews = () => {
+const UpdateNotice = () => {
+  
   const [updateNews, setUpdateNews] = useState({});
-
+  
   const [loadNews, setLoadNews] = useState([]);
-  console.log(loadNews);
+  console.log(loadNews)
   const [success, setSuccess] = useState(false);
   const { id } = useParams();
   const handleUpdateForm = (e) => {
-    const url = `http://localhost:5000/news/update/${id}`;
+    const url = `http://localhost:5000/notice/update/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -22,9 +24,9 @@ const UpdateNews = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.modifiedCount > 0) {
-          setSuccess(true);
-        }
+            if(data.modifiedCount > 0){
+              setSuccess(true)
+            }
       });
 
     e.preventDefault();
@@ -33,33 +35,33 @@ const UpdateNews = () => {
     const updateTitle = e.target.value;
     // const updatedNews={title:updateTitle,description:updateNews.description,image:updateNews.image}
     // setUpdateNews(updatedNews)
-
+    
     const updatedNews = { ...updateNews };
-    updatedNews.title = updateTitle;
-    setUpdateNews(updatedNews);
+     updatedNews.title = updateTitle;
+     setUpdateNews(updatedNews)
   };
   const handleDesChange = (e) => {
     const updateDes = e.target.value;
     const updatedNews = { ...updateNews };
     updatedNews.description = updateDes;
-    setUpdateNews(updatedNews);
+    setUpdateNews(updatedNews)
   };
-  const handleImageChange = (e) => {
+  const handleImageChange= (e) => {
     const updateImage = e.target.value;
     const updatedNews = { ...updateNews };
     updatedNews.image = updateImage;
-    setUpdateNews(updatedNews);
+    setUpdateNews(updatedNews)
   };
-
+  
   const handleUpdate = (id) => {
-    fetch(`http://localhost:5000/news/update/${id}`)
+    fetch(`http://localhost:5000/notice/update/${id}`)
       .then((res) => res.json())
       .then((data) => setUpdateNews(data));
   };
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure,you want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/news/${id}`;
+      const url = `http://localhost:5000/notice/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -74,7 +76,7 @@ const UpdateNews = () => {
     }
   };
   useEffect(() => {
-    fetch("http://localhost:5000/news")
+    fetch("http://localhost:5000/notices")
       .then((res) => res.json())
       .then((data) => setLoadNews(data));
   }, []);
@@ -85,54 +87,43 @@ const UpdateNews = () => {
           <Dashboard />
         </div>
         <div id="content" className="p-4 p-md-5 pt-5 col-md-10">
-          <h2 className="mb-4 text-center">Update News</h2>
+          <h2 className="mb-4 text-center">Update Notice</h2>
           <div className="mt-3">
             {success && (
-              <Alert severity="success">News Update Successfully!</Alert>
+              <Alert severity="success">Notice Update Successfully!</Alert>
             )}
           </div>
           <Form onSubmit={handleUpdateForm}>
-            {/* <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Author</Form.Label>
-              <Form.Control
-                onChange={handleBlur}
-                name="name"
-                type="text"
-                value={user?.displayName}
-                placeholder="Enter News Title"
-              />
-            </Form.Group> */}
+            
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-              <Form.Label>News Title</Form.Label>
+              <Form.Label>Notice Title</Form.Label>
               <Form.Control
                 onChange={handleTitleChange}
                 name="title"
                 type="text"
                 value={updateNews?.title}
-                placeholder="Enter News Title"
               />
             </Form.Group>
             <Form.Group
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
-              <Form.Label>Description</Form.Label>
+              <Form.Label>Time Length</Form.Label>
               <Form.Control
                 onChange={handleDesChange}
-                name="description"
+                name="length"
                 as="textarea"
                 rows={3}
-                value={updateNews?.description}
+                value={updateNews?.length}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Upload Image URL</Form.Label>
+              <Form.Label>Upload Routine URL</Form.Label>
               <Form.Control
                 onChange={handleImageChange}
-                name="image"
+                name="URL"
                 type="text"
-                placeholder="Enter image Url"
-                value={updateNews?.image}
+                value={updateNews?.URL}
               />
             </Form.Group>
             <div className="d-grid gap-2">
@@ -174,4 +165,4 @@ const UpdateNews = () => {
   );
 };
 
-export default UpdateNews;
+export default UpdateNotice;

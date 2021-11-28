@@ -20,6 +20,7 @@ import AddNews from "./Pages/Dashboard/Dashboard/AddNews";
 import SingleNews from "./Home/NoticeBoard/News/SingleNews";
 import UpdateNews from "./Pages/Dashboard/Dashboard/UpdateNews";
 import AddNotice from "./Pages/Dashboard/Dashboard/AddNotice";
+import UpdateNotice from "./Pages/Dashboard/Dashboard/UpdateNotice";
 
 function App() {
   return (
@@ -50,6 +51,9 @@ function App() {
           </Route>
           <Route path="/staffs">
             <OtherStaff />
+          </Route>
+          <Route path="/notice/update/:id">
+            <UpdateNotice />
           </Route>
           <Route path="/notice">
             <NoticeBoard />
