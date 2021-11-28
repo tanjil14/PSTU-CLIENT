@@ -6,19 +6,18 @@ import useAuth from "../../../hooks/useAuth";
 import Dashboard from "./Dashboard";
 
 const AddNews = () => {
-  const { user ,remove} = useAuth();
+  const { user } = useAuth();
   const [loadNews,setLoadNews]=useState([])
   const [news, setNews] = useState({});
   const [success, setSuccess] = useState(false);
   const handleForm = (e) => {
-    console.log("click");
+    
     //collect data
     const allNews = {
       ...news,
       date: new Date().toLocaleDateString(),
       time: new Date().toLocaleTimeString(),
     };
-    console.log(allNews);
     //send to the server
     fetch("http://localhost:5000/news", {
       method: "POST",
@@ -31,9 +30,13 @@ const AddNews = () => {
       .then((data) => {
         if (data.insertedId) {
           setSuccess(true);
+          const previousNews =[...loadNews]
+          previousNews.push(allNews)
+          setLoadNews(previousNews)
         }
       });
     e.preventDefault();
+    
   };
   const handleBlur = (e) => {
     const field = e.target.name;
@@ -42,10 +45,10 @@ const AddNews = () => {
     newData[field] = value;
     setNews(newData);
   };
-  const handleUpdate=()=>{
-
-  }
+ 
   const handleDelete=(id)=>{
+    const proceed=window.confirm('Are you sure,you want to delete?');
+    if(proceed){
       const url=`http://localhost:5000/news/${id}`
       fetch(url,{
           method:'DELETE'
@@ -58,7 +61,7 @@ const AddNews = () => {
               setLoadNews(remainingNews)
           }
       })
-    console.log(id)
+    }
   }
   useEffect(()=>{
     fetch('http://localhost:5000/news')
@@ -126,7 +129,7 @@ const AddNews = () => {
             </div>
           </Form>
          {
-             loadNews.map(nw=><div key={nw._id} className="list-group mt-5">
+             loadNews.map(nw=><div key={Math.random()} className="list-group mt-5">
              <Link
                to='#'
                className="list-group-item list-group-item-action active"
@@ -135,7 +138,8 @@ const AddNews = () => {
                <div className="d-flex w-100 justify-content-between">
                  <h5 className="mb-1">{nw.title}</h5>
                  <div className="d-flex gap-2">
-                   <button onClick={() => remove(nw._id)} className="btn btn-warning btn-sm">Update</button>
+                   <Link to={`/news/update/${nw._id}`}>
+                   <button  className="btn btn-warning btn-sm">Update</button> </Link>
                    <button onClick={()=>handleDelete(nw._id)} className="btn btn-danger btn-sm">Delete</button>
                  </div>
                </div>

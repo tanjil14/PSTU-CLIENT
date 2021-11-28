@@ -18,6 +18,7 @@ import AuthProvider from "./context/AuthProvider/AuthProvider";
 import PrivateRoute from "./Pages/Dashboard/Login/PrivateRoute/PrivateRoute";
 import AddNews from "./Pages/Dashboard/Dashboard/AddNews";
 import SingleNews from "./Home/NoticeBoard/News/SingleNews";
+import UpdateNews from "./Pages/Dashboard/Dashboard/UpdateNews";
 
 function App() {
   return (
@@ -52,7 +53,10 @@ function App() {
           <Route path="/notice">
             <NoticeBoard />
           </Route>
-          <Route  path="/news/:id">
+          <Route path="/news/update/:id">
+            <UpdateNews/>
+          </Route>
+          <Route path="/news/:id">
             <SingleNews/>
           </Route>
           <Route path="/news">
