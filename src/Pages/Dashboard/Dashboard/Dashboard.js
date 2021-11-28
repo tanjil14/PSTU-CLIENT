@@ -19,8 +19,8 @@ const Dashboard = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/admin/userlist">
-            <span className="fa fa-user mr-3"></span> User List
+          <NavLink to="/add_notice">
+            <span className="fa fa-user mr-3"></span> Add Event
           </NavLink>
         </li>
         <li>

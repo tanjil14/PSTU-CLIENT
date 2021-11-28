@@ -19,6 +19,7 @@ import PrivateRoute from "./Pages/Dashboard/Login/PrivateRoute/PrivateRoute";
 import AddNews from "./Pages/Dashboard/Dashboard/AddNews";
 import SingleNews from "./Home/NoticeBoard/News/SingleNews";
 import UpdateNews from "./Pages/Dashboard/Dashboard/UpdateNews";
+import AddNotice from "./Pages/Dashboard/Dashboard/AddNotice";
 
 function App() {
   return (
@@ -71,6 +72,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/add_news">
             <AddNews/>
+          </PrivateRoute>
+          <PrivateRoute path="/add_notice">
+            <AddNotice/>
           </PrivateRoute>
           <Route path="/login">
             <Login/>

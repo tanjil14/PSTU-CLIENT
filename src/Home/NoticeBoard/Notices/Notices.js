@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Notices = () => {
+    const [notices,setNotices]=useState([])
+    useEffect(()=>{
+        fetch("http://localhost:5000/notices")
+        .then(res=>res.json())
+        .then(data=>setNotices(data))
+    },[])
     return (
         <div className="Notices-list">
             <ul>
-                <li>item-1</li>
-                <li>item-1</li>
-                <li>item-1</li>
-                <li>item-1</li>
-                <li>item-1</li>
+                {
+                    notices.map(notice=><li key={notice._id}> <a href={notice.URL} target="_blank" rel="noreferrer">{notice.title}</a> </li>)
+                }
             </ul>
         </div>
     );
