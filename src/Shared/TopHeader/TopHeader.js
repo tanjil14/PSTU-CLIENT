@@ -2,6 +2,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import useAuth from "../../hooks/useAuth";
 import Banner from "../Banner/Banner";
 import Header from "../Header/Header";
@@ -23,11 +24,11 @@ const TopHeader = () => {
             </li>
             :
             <li>
-              <Link to="/login">  LogIn</Link>
+              <HashLink to="/login">  LogIn</HashLink>
             </li>
             }
             <li>
-              <Link to="/dashboard"> Admin</Link>
+              <HashLink to="/dashboard"> Admin</HashLink>
             </li>
             {/* <li>
               <Link to="#">Student Log In</Link>
