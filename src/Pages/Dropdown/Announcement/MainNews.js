@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
-import "./MainNews.css";
-import SubNews from "./SubNews";
 import Footer from "../../../Shared/Footer/Footer";
 import TopHeader from "../../../Shared/TopHeader/TopHeader";
-import { useEffect } from "react";
-import { useState } from "react";
+import "./MainNews.css";
+import SubNews from "./SubNews";
 const MainNews = () => {
   const [news,setNews]=useState([])
   useEffect(()=>{
-    fetch('http://localhost:5000/news')
+    fetch('https://pure-wildwood-54871.herokuapp.com/news')
     .then(res=>res.json())
     .then(data=>setNews(data))
   },[])

@@ -1,5 +1,5 @@
 import { Alert } from "@mui/material";
-import React, { useState,useEffect  } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
@@ -19,7 +19,7 @@ const AddNotice = () => {
       time: new Date().toLocaleTimeString(),
     };
     //send to the server
-    fetch("http://localhost:5000/notices", {
+    fetch("https://pure-wildwood-54871.herokuapp.com/notices", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -49,7 +49,7 @@ const AddNotice = () => {
   const handleDelete=(id)=>{
     const proceed=window.confirm('Are you sure,you want to delete?');
     if(proceed){
-      const url=`http://localhost:5000/notice/${id}`
+      const url=`https://pure-wildwood-54871.herokuapp.com/notice/${id}`
       fetch(url,{
           method:'DELETE'
       })
@@ -64,7 +64,7 @@ const AddNotice = () => {
     }
   }
   useEffect(()=>{
-    fetch('http://localhost:5000/notices')
+    fetch('https://pure-wildwood-54871.herokuapp.com/notices')
     .then(res=>res.json())
     .then(data=>setLoadNews(data))
 },[])

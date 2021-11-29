@@ -2,8 +2,8 @@ import { Alert } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
-
 import Dashboard from "./Dashboard";
+
 
 const UpdateNotice = () => {
   
@@ -14,7 +14,7 @@ const UpdateNotice = () => {
   const [success, setSuccess] = useState(false);
   const { id } = useParams();
   const handleUpdateForm = (e) => {
-    const url = `http://localhost:5000/notice/update/${id}`;
+    const url = `https://pure-wildwood-54871.herokuapp.com/notice/update/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -54,14 +54,14 @@ const UpdateNotice = () => {
   };
   
   const handleUpdate = (id) => {
-    fetch(`http://localhost:5000/notice/update/${id}`)
+    fetch(`https://pure-wildwood-54871.herokuapp.com/notice/update/${id}`)
       .then((res) => res.json())
       .then((data) => setUpdateNews(data));
   };
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure,you want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/notice/${id}`;
+      const url = `https://pure-wildwood-54871.herokuapp.com/notice/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -76,7 +76,7 @@ const UpdateNotice = () => {
     }
   };
   useEffect(() => {
-    fetch("http://localhost:5000/notices")
+    fetch("https://pure-wildwood-54871.herokuapp.com/notices")
       .then((res) => res.json())
       .then((data) => setLoadNews(data));
   }, []);

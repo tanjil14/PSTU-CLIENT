@@ -1,16 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
-
-import { useEffect } from "react";
-import { useState } from "react";
-import TopHeader from "../../../Shared/TopHeader/TopHeader";
-import Footer from "../../../Shared/Footer/Footer";
 import { useParams } from "react-router-dom";
+import Footer from "../../../Shared/Footer/Footer";
+import TopHeader from "../../../Shared/TopHeader/TopHeader";
+
 const SingleNews = () => {
     const { id } = useParams();
   const [news,setNews]=useState([])
   useEffect(()=>{
-    fetch(`http://localhost:5000/news/${id}`)
+    fetch(`https://pure-wildwood-54871.herokuapp.com/news/${id}`)
     .then(res=>res.json())
     .then(data=>setNews(data))
   },[id])

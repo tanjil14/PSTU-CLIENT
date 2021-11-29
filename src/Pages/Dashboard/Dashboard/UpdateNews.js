@@ -12,7 +12,7 @@ const UpdateNews = () => {
   const [success, setSuccess] = useState(false);
   const { id } = useParams();
   const handleUpdateForm = (e) => {
-    const url = `http://localhost:5000/news/update/${id}`;
+    const url = `https://pure-wildwood-54871.herokuapp.com/news/update/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -52,14 +52,14 @@ const UpdateNews = () => {
   };
 
   const handleUpdate = (id) => {
-    fetch(`http://localhost:5000/news/update/${id}`)
+    fetch(`https://pure-wildwood-54871.herokuapp.com/news/update/${id}`)
       .then((res) => res.json())
       .then((data) => setUpdateNews(data));
   };
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure,you want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/news/${id}`;
+      const url = `https://pure-wildwood-54871.herokuapp.com/news/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -74,7 +74,7 @@ const UpdateNews = () => {
     }
   };
   useEffect(() => {
-    fetch("http://localhost:5000/news")
+    fetch("https://pure-wildwood-54871.herokuapp.com/news")
       .then((res) => res.json())
       .then((data) => setLoadNews(data));
   }, []);

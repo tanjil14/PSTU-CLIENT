@@ -1,12 +1,10 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import "./News.css"
+import "./News.css";
 const News = () => {
     const [news,setNews]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/news')
+        fetch('https://pure-wildwood-54871.herokuapp.com/news')
         .then(res=>res.json())
         .then(data=>setNews(data))
       },[])

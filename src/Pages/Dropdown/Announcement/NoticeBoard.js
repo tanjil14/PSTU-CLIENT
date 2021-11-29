@@ -7,7 +7,7 @@ import SingleNotice from './SingleNotice';
 const NoticeBoard = () => {
   const [notices,setNotices]=useState([])
     useEffect(()=>{
-        fetch("http://localhost:5000/notices")
+        fetch("https://pure-wildwood-54871.herokuapp.com/notices")
         .then(res=>res.json())
         .then(data=>setNotices(data))
     },[])
